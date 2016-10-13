@@ -51,7 +51,7 @@ var _ = Describe("Certify with: ", func() {
 
 	Context("given a driver", func() {
 		XIt("should respond with Capabilities", func() {
-			resp := driverClient.Capabilities(testLogger)
+			resp := driverClient.Capabilities(testEnv)
 			Expect(resp.Capabilities).NotTo(BeNil())
 			Expect(resp.Capabilities.Scope).To(Or(Equal("local"), Equal("global")))
 		})
